@@ -1,5 +1,7 @@
+/* eslint-disable react/no-typos */
 import React, { Fragment, useState } from "react";
 import { v4 as uuid } from "uuid";
+import PropTypes from "prop-types";
 
 const Formulario = ({ crearCita }) => {
   const [cita, setCita] = useState({
@@ -107,4 +109,7 @@ const Formulario = ({ crearCita }) => {
   );
 };
 
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired,
+};
 export default Formulario;

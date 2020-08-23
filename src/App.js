@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Formulario from "./components/Formulario.js";
 import Cita from "./components/Cita.js";
+
 function App() {
   //Citas en localStorage
   let citasIniciales = JSON.parse(localStorage.getItem("citas"));
@@ -17,7 +18,7 @@ function App() {
     } else {
       localStorage.setItem("citas", JSON.stringify([]));
     }
-  }, [citas]);
+  }, [citas, citasIniciales]);
 
   const crearCita = (cita) => {
     setCitas([...citas, cita]);
